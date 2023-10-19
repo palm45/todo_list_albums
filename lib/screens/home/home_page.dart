@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.all(4.0),
                           child: Text(
                             todoItem.title,
-                            maxLines: 2,
+                            maxLines: 3,
                           ),
                         ),
                       ),
