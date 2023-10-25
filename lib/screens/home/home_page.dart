@@ -49,18 +49,20 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Widget body;
     if(_error != null){
-      body = Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(_error!),
-          const SizedBox(height: 16),
-          ElevatedButton(
-              onPressed: () {
-                getTodos();
-              },
-              child: Text('RETRY')
-          )
-        ],
+      body = Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(_error!),
+            const SizedBox(height: 16),
+            ElevatedButton(
+                onPressed: () {
+                  getTodos();
+                },
+                child: Text('RETRY')
+            )
+          ],
+        ),
       );
     }else if(_itemList == null){
       body = const Center(child:  CircularProgressIndicator());
